@@ -303,12 +303,14 @@ footer {
     }
 }
 
-
+@mixin jumbotron-box-shadow($property) {
+    -webkit-box-shadow: $property;
+    -moz-box-shadow: $property;
+    box-shadow: $property;
+}
 
 .jumbotron {
-    -webkit-box-shadow: 0px 0px 10px 1px rgba(102,102,102,0.85);
-    -moz-box-shadow: 0px 0px 10px 1px rgba(102,102,102,0.85);
-    box-shadow: 0px 0px 10px 1px rgba(102,102,102,0.85);
+    @include jumbotron-box-shadow(0px 0px 10px 1px rgba(102,102,102,0.85));
     padding: 50px;
     margin: 70px 0;
     text-align: center;
